@@ -1,0 +1,29 @@
+body{
+	background: lightcoral;
+}
+.cl{
+	max-width:500px;
+	height: auto;
+	margin: auto;
+	margin-top: 250px;
+	border: 2px solid black;
+	/*position: absolute;
+	top: 40%;
+	left:42%;*/
+	text-align: center;
+	padding: 20px 20px 20px 20px;
+	border-radius:22px;
+	font-family: monospace;
+	letter-spacing: 5px;
+	font-size: 26px;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .cl{
+    max-width:500px;
+	height: auto;
+	font-size: 26px;
+  }
+}

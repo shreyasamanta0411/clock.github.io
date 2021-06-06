@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Digital clock</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="cl" id="sk">
+	</div>
+	<script type="text/javascript">
+		function time(){
+			var d=new Date();
+			var h=d.getHours();
+			var m=d.getMinutes();
+			var s=d.getSeconds();
+			var ss="AM";
+			if(h==0){
+			    h=12;
+			    ss="AM";
+			}
+			if(h>12){
+				h=h-12;
+				ss="PM"
+			}
+			if(h==12){
+				ss="PM";
+			}
+			h=(h<10)?"0"+h:h;
+			m=(m<10)?"0"+m:m;
+			s=(s<10)?"0"+s:s;
+			setTimeout(time,1000);
+			document.getElementById("sk").innerHTML=h+":"+m+":"+s+" "+ss;
+		}
+		time();
+    </script>
+</body>
+</html>
